@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da validação</title>
+</head>
+<body>
+    <h1>Validation Results</h1>
+    {% if validation_results %}
+        <ul>
+        {% for result in validation_results %}
+            <li>Record {{ result.record }}:</li>
+            <ul>
+            {% for term, error in result.errors.items() %}
+                <li>
+                    Term "{{ term }}", Rule {{ error.rule }}, Invalid Value: "{{ error.value }}"
+                    {% if 'corrected' in error and error.corrected %}
+                        (Corrected to: "{{ error.value }}")
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+        </ul>
+        <form action="/save" method="post">
+            <input type="hidden" name="validated_filename" value="{{ validated_filename }}">
+            <button type="submit">Save Validated File</button>
+        </form>
+    {% else %}
+        <p>Todos os registros são válidos.</p>
+    {% endif %}
+</body>
+</html>
+

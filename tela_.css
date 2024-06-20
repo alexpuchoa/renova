@@ -1,0 +1,186 @@
+/* Assistente de texto_01 */
+position: relative;
+width: 1150px;
+height: 1105px;
+left: calc(50% - 1150px/2 - 1400px);
+top: 15081px;
+background: #FFFFFF;
+box-shadow: 0px 1px 6px rgba(51, 51, 51, 0.16);
+
+/* Frame 427321722 */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+position: absolute;
+width: 741px;
+height: 66px;
+left: 32px;
+top: 32px;
+
+/* Frame 368 */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+width: 741px;
+height: 33px;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* Assistente de texto */
+width: 741px;
+height: 33px;
+font-family: 'Rawline';
+font-style: normal;
+font-weight: 500;
+font-size: 24.19px;
+line-height: 33px;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #000000;
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+/* ArquivoXPTO.csv */
+width: 741px;
+height: 33px;
+font-family: 'Rawline';
+font-style: normal;
+font-weight: 700;
+font-size: 24.19px;
+line-height: 33px;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #001EFF;
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* Frame 941 */
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+position: absolute;
+width: 741px;
+height: 45px;
+right: 32px;
+bottom: 40px;
+
+/* button */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+width: 225px;
+height: 45px;
+background: #FFFFFF;
+border: 1px solid #1351B4;
+border-radius: 20px;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+/* icon */
+display: none;
+width: 20px;
+height: 23px;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+font-family: 'Font Awesome 5 Free';
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 18px;
+display: flex;
+align-items: center;
+text-align: center;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #1351B4;
+
+/* text */
+width: 114px;
+height: 22px;
+font-family: 'Rawline';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #1351B4;
+
+/* button (active) */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+width: 225px;
+height: 45px;
+background: #1351B4;
+border-radius: 20px;
+flex: none;
+order: 1;
+flex-grow: 0;
+
+/* icon (active) */
+display: none;
+width: 20px;
+height: 23px;
+position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+font-family: 'Font Awesome 5 Free';
+font-style: normal;
+font-weight: 900;
+font-size: 16px;
+line-height: 18px;
+display: flex;
+align-items: center;
+text-align: center;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #FFFFFF;
+
+/* text (active) */
+width: 75px;
+height: 22px;
+font-family: 'Rawline';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+
+/* Texto explicativo sobre os dados a serem preenchidos nesta etapa. */
+position: absolute;
+width: 1093px;
+height: 19px;
+left: 32px;
+top: 112px;
+font-family: 'Rawline';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+font-feature-settings: 'pnum' on, 'lnum' on;
+color: #000000;
+
+/* Additional styles omitted for brevity... */

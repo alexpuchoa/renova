@@ -1,0 +1,888 @@
+{
+    "basisOfRecord": {
+        "rule_number": 1,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_basisOfRecord",
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "modified": {
+        "rule_number": 2,
+        "mandatory": "yes",
+        "format_check": "^\\d{4}-\\d{2}-\\d{2}$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "range",
+            "min": "01/01/2010"
+        }
+    },
+    "datasetName": {
+        "rule_number": 3,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "filename_if_blank",
+            "consistent": "yes"
+        }
+    },
+    "type": {
+        "rule_number": 4,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_type",
+        "value_check": null
+    },
+    "language": {
+        "rule_number": 5,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_language",
+        "value_check": null
+    },
+    "institutionID": {
+        "rule_number": 6,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_institutionID",
+        "value_check": null
+    },
+    "institutionCode": {
+        "rule_number": 7,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_institutionCode",
+        "value_check": null
+    },
+    "collectionCode": {
+        "rule_number": 8,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "license": {
+        "rule_number": 9,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_license",
+        "value_check": null
+    },
+    "references": {
+        "rule_number": 10,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "rightsHolder": {
+        "rule_number": 11,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_rightsHolder",
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "dynamicProperties": {
+        "rule_number": 12,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "occurrenceID": {
+        "rule_number": 13,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "required": "yes",
+            "unique": "yes"
+        }
+    },
+    "catalogNumber": {
+        "rule_number": 14,
+        "mandatory": null,
+        "format_check": "^[a-zA-Z0-9\\-.]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "otherCatalogNumbers": {
+        "rule_number": 15,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "recordedBy": {
+        "rule_number": 16,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "recordNumber": {
+        "rule_number": 17,
+        "mandatory": null,
+        "format_check": "^[A-Z0-9\\-]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "individualCount": {
+        "rule_number": 18,
+        "mandatory": null,
+        "format_check": "^[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "0"
+        }
+    },
+    "organismQuantity": {
+        "rule_number": 19,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "organismQuantityType": {
+        "rule_number": 20,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "establishmentMeans": {
+        "rule_number": 21,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #1",
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "georeferenceVerificationStatus": {
+        "rule_number": 22,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_georeferenceVerificationStatus",
+        "value_check": null
+    },
+    "sex": {
+        "rule_number": 23,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_sex",
+        "value_check": null
+    },
+    "lifeStage": {
+        "rule_number": 24,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_lifeStage",
+        "value_check": null
+    },
+    "reproductiveCondition": {
+        "rule_number": 25,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_reproductiveCondition",
+        "value_check": null
+    },
+    "preparations": {
+        "rule_number": 26,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "disposition": {
+        "rule_number": 27,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_disposition",
+        "value_check": null
+    },
+    "associatedTaxa": {
+        "rule_number": 28,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "associatedReferences": {
+        "rule_number": 29,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "associatedMedia": {
+        "rule_number": 30,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "associatedSequences": {
+        "rule_number": 31,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "occurrenceRemarks": {
+        "rule_number": 32,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "organismID": {
+        "rule_number": 33,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "eventDate": {
+        "rule_number": 34,
+        "mandatory": "yes",
+        "format_check": "^\\d{4}-\\d{2}-\\d{2}$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "range",
+            "min": "01/01/2010"
+        }
+    },
+    "eventTime": {
+        "rule_number": 35,
+        "mandatory": null,
+        "format_check": "^\\d{4}-\\d{2}-\\d{2}$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "endDayOfYear": {
+        "rule_number": 36,
+        "mandatory": null,
+        "format_check": "^[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "0",
+            "max": 366.0
+        }
+    },
+    "year": {
+        "rule_number": 37,
+        "mandatory": null,
+        "format_check": "^\\d{4}$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "2010"
+        }
+    },
+    "month": {
+        "rule_number": 38,
+        "mandatory": null,
+        "format_check": "^[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "1",
+            "max": 12.0
+        }
+    },
+    "day": {
+        "rule_number": 39,
+        "mandatory": null,
+        "format_check": "^[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "1",
+            "max": 31.0
+        }
+    },
+    "verbatimEventDate": {
+        "rule_number": 40,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "habitat": {
+        "rule_number": 41,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "samplingProtocol": {
+        "rule_number": 42,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "samplingEffort": {
+        "rule_number": 43,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "eventRemarks": {
+        "rule_number": 44,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "higherGeography": {
+        "rule_number": 45,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "continent": {
+        "rule_number": 46,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_continent",
+        "value_check": null
+    },
+    "country": {
+        "rule_number": 47,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_country",
+        "value_check": null
+    },
+    "countryCode": {
+        "rule_number": 48,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_countryCode",
+        "value_check": null
+    },
+    "stateProvince": {
+        "rule_number": 49,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #4",
+        "value_check": null
+    },
+    "county": {
+        "rule_number": 50,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #4",
+        "value_check": null
+    },
+    "municipality": {
+        "rule_number": 51,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #4",
+        "value_check": null
+    },
+    "island": {
+        "rule_number": 52,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_island",
+        "value_check": null
+    },
+    "islandGroup": {
+        "rule_number": 53,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "waterBody": {
+        "rule_number": 54,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "locality": {
+        "rule_number": 55,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #4:",
+        "value_check": null
+    },
+    "verbatimLocality": {
+        "rule_number": 56,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "locationAccordingTo": {
+        "rule_number": 57,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "locationRemarks": {
+        "rule_number": 58,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "minimumElevationInMeters": {
+        "rule_number": 59,
+        "mandatory": null,
+        "format_check": "^[0-9]*\\.?[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "0"
+        }
+    },
+    "maximumElevationInMeters": {
+        "rule_number": 60,
+        "mandatory": null,
+        "format_check": "^[0-9]*\\.?[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "0"
+        }
+    },
+    "minimumDepthInMeters ": {
+        "rule_number": 61,
+        "mandatory": null,
+        "format_check": "^[0-9]*\\.?[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "0"
+        }
+    },
+    "maximumDepthInMeters": {
+        "rule_number": 62,
+        "mandatory": null,
+        "format_check": "^[0-9]*\\.?[0-9]+$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "0"
+        }
+    },
+    "verbatimLatitude": {
+        "rule_number": 63,
+        "mandatory": null,
+        "format_check": "^\\\\d{2} \\\\d{2} \\\\d{2}\\\\.\\\\d{2}[NS]$",
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #3",
+        "value_check": null
+    },
+    "verbatimLongitude": {
+        "rule_number": 64,
+        "mandatory": null,
+        "format_check": "^\\\\d{3}d \\\\d{2}' \\\\d{2}\\\" [EW]$",
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #3",
+        "value_check": null
+    },
+    "decimalLatitude": {
+        "rule_number": 65,
+        "mandatory": null,
+        "format_check": "^-?[0-9]+(\\.[0-9]+)?$",
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #3",
+        "value_check": {
+            "type": "integer_range",
+            "min": "-90",
+            "max": 90.0
+        }
+    },
+    "decimalLongitude": {
+        "rule_number": 66,
+        "mandatory": null,
+        "format_check": "^-?[0-9]+(\\.[0-9]+)?$",
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #3",
+        "value_check": {
+            "type": "integer_range",
+            "min": "-180",
+            "max": 180.0
+        }
+    },
+    "coordinateUncertaintyInMeters": {
+        "rule_number": 67,
+        "mandatory": null,
+        "format_check": "^-?[0-9]+(\\.[0-9]+)?$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "integer_range",
+            "min": "100"
+        }
+    },
+    "verbatimCoordinates": {
+        "rule_number": 68,
+        "mandatory": null,
+        "format_check": "'41 05 54S 121 05 34W' - '17T 630000 4833400'",
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #3",
+        "value_check": null
+    },
+    "verbatimCoordinateSystem": {
+        "rule_number": 69,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_verbatimCoordinateSystem",
+        "value_check": null
+    },
+    "geodeticDatum": {
+        "rule_number": 70,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "georeferenceProtocol": {
+        "rule_number": 71,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "georeferenceSources": {
+        "rule_number": 72,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "\"['-'",
+                " '|'",
+                " ';']\""
+            ],
+            "corrected_delimiter": "\"|\""
+        }
+    },
+    "georeferencedBy": {
+        "rule_number": 73,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "georeferencedDate": {
+        "rule_number": 74,
+        "mandatory": null,
+        "format_check": "^\\d{4}-\\d{2}-\\d{2}$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "range",
+            "min": "01/01/2010"
+        }
+    },
+    "georeferenceRemarks": {
+        "rule_number": 75,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "kingdom": {
+        "rule_number": 76,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "phylum": {
+        "rule_number": 77,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "class": {
+        "rule_number": 78,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "order": {
+        "rule_number": 79,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "family": {
+        "rule_number": 80,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "genus": {
+        "rule_number": 81,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "specificEpithet": {
+        "rule_number": 82,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "infraspecificEpithet": {
+        "rule_number": 83,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "scientificName": {
+        "rule_number": 84,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "scientificNameAuthorship ": {
+        "rule_number": 85,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "Fonte externa #2",
+        "value_check": null
+    },
+    "taxonRank": {
+        "rule_number": 86,
+        "mandatory": "yes",
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": "vocab_taxonRank",
+        "value_check": {
+            "required": "yes"
+        }
+    },
+    "vernacularName": {
+        "rule_number": 87,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "taxonRemarks": {
+        "rule_number": 88,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "identificationQualifier": {
+        "rule_number": 89,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "typeStatus": {
+        "rule_number": 90,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "identifiedBy": {
+        "rule_number": 91,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": {
+            "type": "delimiter_check",
+            "allowed_delimiters": [
+                "['-'",
+                " '|'",
+                " ';']"
+            ],
+            "corrected_delimiter": "|'"
+        }
+    },
+    "dateIdentified": {
+        "rule_number": 92,
+        "mandatory": null,
+        "format_check": "^\\d{4}-\\d{2}-\\d{2}$",
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    },
+    "identificationRemarks": {
+        "rule_number": 93,
+        "mandatory": null,
+        "format_check": null,
+        "allowed_characters": null,
+        "controlled_vocabulary": null,
+        "value_check": null
+    }
+}

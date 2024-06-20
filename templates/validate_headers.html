@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Cabeçalho do Arquivo</title>
+</head>
+<body>
+    <h1>Validar Cabeçalho do Arquivo</h1>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th>Header Original</th>
+                <th>Novo Header</th>
+            </tr>
+            {% for header in headers %}
+            <tr>
+                <td>{{ header }}</td>
+                <td>
+                    {% if header in darwin_core_terms %}
+                        <span>Termo valido)</span>
+                        <input type="hidden" name="headers" value="{{ header }}">
+                    {% else %}
+                        <select name="headers">
+                            <option value="{{ header }}">{{ header }}</option>
+                            {% for term in darwin_core_terms %}
+                            <option value="{{ term }}">{{ term }}</option>
+                            {% endfor %}
+                            <option value="{{ header }}">Manter Original</option>
+                        </select>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input type="submit" value="Validar Cabeçalho do Arquivo">
+    </form>
+</body>
+</html>
+
