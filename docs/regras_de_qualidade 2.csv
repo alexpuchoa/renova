@@ -1,0 +1,94 @@
+﻿rule_number;term;controlled_vocabulary;mandatory;type;allowed_delimiter;corrected_delimiter;min;max;required;consistent;unique;format_check;allowed_characters;Regra complexa;External source;Exemplos de Fornecimentos possíveis
+1;basisOfRecord;vocab_basisOfRecord;yes;;;;;;yes;;;;;;;
+2;modified;;yes;range;;;01/01/2010;;;;;^\d{4}-\d{2}-\d{2}$;;;;1963-03-08T14:07-0600' (8 de março de 1963 às 14:07 no fuso horário seis horas antes do UTC) - '2009-02-20T08:40Z' (20 de fevereiro de 2009 08:40 UTC) - '2018-08-29T15:19' (15h19min de 29 de agosto de 2018 no horário local) - '1809-02-12' (algum tempo durante 12 de fevereiro de 1809) - '1906-06' (em junho de 1906) - '1971' (algum momento no ano de 1971) - '2007-03-01T13:00:00Z/2008-05-11T15:30:00Z' (algum tempo durante o intervalo entre 1 de Março de 2007 13h UTC e 11 de Maio de 2008 15:30 UTC) - '1900/1909' (algum tempo durante o intervalo entre o início do ano 1900 e o final do ano 1909) - «2007-11-13/15' (algum tempo no intervalo compreendido entre 13 de Novembro de 2007 e 15 de Novembro de 2007)
+3;datasetName;;;filename_if_blank;;;;;;yes;;;;if empty;filename;
+4;type;vocab_type;;;;;;;;;;;;;;
+5;language;vocab_language;;;;;;;;;;;;;;
+6;institutionID;vocab_institutionID;;;;;;;;;;;;Substituir por valor válido;;
+7;institutionCode;vocab_institutionCode;;;;;;;;;;;;Substituir por valor válido;;
+8;collectionCode;;;;;;;;;;;;;;;Mamíferos' - 'Hildebrandt' - 'EBIRD' - 'VP'
+9;license;vocab_license;yes;;;;;;;;;;;;;
+10;references;;;;;;;;;;;;;Fonte externa #5;;http://arctos.database.museum/guid/MVZ:Mamm:165861' (exemplo de MaterialSample) - 'https://www.catalogueoflife.org/data/taxon/32664' (Exemplo de táxon)
+11;rightsHolder;vocab_rightsHolder;yes;;;;;;yes;;;;;Substituir por valor válido;;'Os regentes da Universidade da Califórnia'
+12;dynamicProperties;;;;;;;;;;;;;Fonte externa #6;;
+13;occurrenceID;;yes;;;;;;yes;;yes;;;;;http://arctos.database.museum/guid/MSB:Mamm:233627' - '000866D2-C177-4648-A200-EAD4007051B9' - 'urna:catálogo:UWBM:Pássaro:89776'
+14;catalogNumber;;;;;;;;;;;^[a-zA-Z0-9\-.]+$;;;;'145732' - '145732a' - '2008.1334' - 'R-4313'
+15;otherCatalogNumbers;;;;;;;;;;;;;;;FMNH:Mamífero:1234' - « NPS YELLO6778 | MBG 33424'
+16;recordedBy;;;;;;;;;;;;;;;José E. Cristóvão' - 'Oliver P. Pearson | Anita K. Pearson' 
+17;recordNumber;;;;;;;;;;;^[A-Z0-9\-]+$;;;;'OPP 7101'
+18;individualCount;;;integer_range;;;0;;;;;^[0-9]+$;;;;0' - '1' - '25'
+19;organismQuantity;;yes;;;;;;yes;;;;;"Se o valor em ""individualCount"" for fornecido e superior a 0, a quantidade de valores fornecidos em ""organismQuantity"" e a quantidade de valores fornecidos em ""organismQuantityType"" devem coincidir com ele.";;
+20;organismQuantityType;;yes;;;;;;yes;;;;;"Se o valor em ""individualCount"" for fornecido e superior a 0, a quantidade de valores fornecidos em ""organismQuantity"" e a quantidade de valores fornecidos em ""organismQuantityType"" devem coincidir com ele.";;
+21;establishmentMeans;Fonte externa #1;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;;;
+22;georeferenceVerificationStatus;vocab_georeferenceVerificationStatus;;;;;;;;;;;;;;
+23;sex;vocab_sex;;;;;;;;;;;;;;
+24;lifeStage;vocab_lifeStage;;;;;;;;;;;;;;
+25;reproductiveCondition;vocab_reproductiveCondition;;;;;;;;;;;;;;
+26;preparations;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;;;fóssil' - 'elenco' - 'fotografia' - 'Extracto de ADN' - 'pele | crânio | esqueleto' -  'animal inteiro (ETOH) | tecido (EDTA)'
+27;disposition;vocab_disposition;;;;;;;;;;;;;;
+28;associatedTaxa;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;;;"''anfitrião':'Quercus alba'' - ''anfitrião':'gbif.org/species/2879737' - ''parasitoide de"":""Cyclocephala signaticollis"" | ""predador de"":""Apis mellifera""'"
+29;associatedReferences;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;;;http://www.sciencemag.org/cgi/content/abstract/322/5899/261' - 'Steven R. Hoofer e Ronald A. Van Den Bussche. 2001. Relações Filogenéticas de Morcegos Plecotínicos e Aliados Baseadas em Sequências Ribossômicas Mitocondriais. Jornal de Mamologia 82(1):131-137. | Walker, Faith M., Jeffrey T. Foster, Kevin P. Drees, Carol L. Chambers. 2014. Descoberta de microssatélites de morcegos malhados (Euderma maculatum) usando sequenciamento illumina. Recursos Genéticos de Conservação.'
+30;associatedMedia;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;Fonte externa #5;'https://arctos.database.museum/media/10520962 | https://arctos.database.museum/media/10520964';'https://arctos.database.museum/media/10520962 | https://arctos.database.museum/media/10520964'
+31;associatedSequences;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;Fonte externa #5;http://www.ncbi.nlm.nih.gov/nuccore/U34853.1' - «http://www.ncbi.nlm.nih.gov/nuccore/GU328060 | http://www.ncbi.nlm.nih.gov/nuccore/AF326093';http://www.ncbi.nlm.nih.gov/nuccore/U34853.1' - «http://www.ncbi.nlm.nih.gov/nuccore/GU328060 | http://www.ncbi.nlm.nih.gov/nuccore/AF326093'
+32;occurrenceRemarks;;;;;;;;;;;;;;;'Encontrado morto na estrada'
+33;organismID;;;;;;;;;;;;;Fonte externa #5;'http://arctos.database.museum/guid/WNMU:Mamm:1249';'http://arctos.database.museum/guid/WNMU:Mamm:1249'
+34;eventDate;;yes;range;;;01/01/2010;;;;;^\d{4}-\d{2}-\d{2}$;;;;Mesmos que em 'modified'
+35;eventTime;;;;;;;;;;;^\d{4}-\d{2}-\d{2}$;;Se não fornecido, aproveitar valor de hora de eventDate, se disponível, para deduzir este.;;14:07-0600' (14:07 no fuso horário seis horas antes do UTC) - '08:40:21Z' (08:40:21 UTC) - '13:00:00Z/15:30:00Z' (o intervalo entre 13h UTC e 15h30 UTC)
+36;endDayOfYear;;;integer_range;;;0;366;;;;^[0-9]+$;;Se fornecido, deve ser um inteiro superior a 0 e inferior a 366 - Se não fornecido, aproveitar o valor do campo 'eventDate' para deduzir este. ;;1 (1 de Janeiro) - 32 (1 de Fevereiro) - 366 (31 de Dezembro) - 365 (30 de Dezembro num ano bissexto, 31 de Dezembro num ano não bissexto)
+37;year;;;integer_range;;;2010;;;;;^\d{4}$;;Se fornecido, verificar se valor coincide com a parcela ano do campo eventDate - Se não fornecido ou discrepante, assumir parcela relativa ao ano do valor em 'eventDate'.;;'1160' - '2008'
+38;month;;;integer_range;;;1;12;;;;^[0-9]+$;;Se fornecido, verificar se valor coincide com a parcela mês do campo eventDate - Se não fornecido ou discrepante, assumir parcela relativa ao mês do valor em 'eventDate';;1' (janeiro) - '10' (outubro)
+39;day;;;integer_range;;;1;31;;;;^[0-9]+$;;Se fornecido, verificar se valor coincide com a parcela dia do campo eventDate - Se não fornecido ou discrepante, assumir parcela relativa ao dia do valor em 'eventDate';;'9' - '28'
+40;verbatimEventDate;;;;;;;;;;;;;;;primavera de 2010' - 'Março 2022' - 'XX-03-1999' - '17IV1934'
+41;habitat;;;;;;;;;;;;;;;'savana de carvalho' - 'Estepe pré-cordilheira'
+42;samplingProtocol;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;;;Armadilha de luz UV' - 'Rede de neblina' - 'Redes de arrasto de fundo' - 'Observação ad hoc | contagem de pontos'
+43;samplingEffort;;;;;;;;;;;;;;;40 noites de armadilhas' - '10 horas-observador' - 110 km a pé1 - '30 km de carro'
+44;eventRemarks;;;;;;;;;;;;;;;'Depois das chuvas recentes, o rio está quase em fase de cheia.'
+45;higherGeography;;;;;;;;;;;;;;;Oceano Atlântico Norte' - 'América do Sul | Argentina | Patagônia | Parque Nacional Nahuel Huapi | Neuquén | Los Lagos'.
+46;continent;vocab_continent;;;;;;;;;;;;;;
+47;country;vocab_country;;;;;;;;;;;;;;
+48;countryCode;vocab_countryCode;;;;;;;;;;;;;;
+49;stateProvince;Fonte externa #4;;;;;;;;;;;;Assegurar que 'stateProvince' tenha valor igual ao do estado em que o município em 'municipality' se situa. Caso 'municipality' esteja vazio, manter o valor que já está em 'stateProvince'. Assegurar que se houver valor em 'stateProvince', este seja no Brasil'.;;São Paulo' - 'Minas Gerais' - 'Espírito Santos'
+50;county;Fonte externa #4;;;;;;;;;;;;Assegurar que 'county' tenha valor igual ao do condado em que o município em 'municipality' se situa. Caso 'munipality' esteja vazio, manter o valor já em 'county'. Assegurar que se houver valor em 'county', este seja no Brasil'. ;;
+51;municipality;Fonte externa #4;;;;;;;;;;;;Caso fornecido, verificar se valor é de um município no condado em 'county', se este for fornecido, e se é no estado em 'stateProvince', se este for fornecido, ou ao menos se é no Brasil'.;;'Petrópolis' - 'Araruama' - 'Torres'
+52;island;vocab_island;;;;;;;;;;;;;;
+53;islandGroup;;;;;;;;;;;;;;;Arquipélago de Abrólhos' - 'Archipiélago Diego Ramírez' - 'Seicheles'
+54;waterBody;;;;;;;;;;;;;;;Oceano Índico' - 'Mar Báltico' - 'Rio Negro' - 'Lago Nahuel Huapi'
+55;locality;Fonte externa #4:;;;;;;;;;;;;Deve ser um nome de localidade existente e dentro do território brasileiro. Caso contrário, gerar alerta.;;Bariloche, 25 km NNE via Ruta Nacional 40 (=Ruta 237)' - 'Queets Rainforest, Parque Nacional Olímpico'
+56;verbatimLocality;;;;;;;;;;;;;;;'25 km NNE Bariloche por R. Nac. 237'
+57;locationAccordingTo;;;;;;;;;;;;;;;Getty Thesaurus de Nomes Geográficos' - 'GADM'
+58;locationRemarks;;;;;;;;;;;;;;;"""debaixo d'água desde 2005"""
+59;minimumElevationInMeters;;;integer_range;;;0;;;;;^[0-9]*\.?[0-9]+$;;Caso esteja vazio e 'maximumElevationInMeters' tenha valor, assumir este.;;-100' - '802'
+60;maximumElevationInMeters;;;integer_range;;;0;;;;;^[0-9]*\.?[0-9]+$;;Caso esteja vazio e 'minimumElevationInMeters' tenha valor, assumir este.;;-205' - '1236'
+61;minimumDepthInMeters ;;;integer_range;;;0;;;;;^[0-9]*\.?[0-9]+$;;Caso esteja vazio e 'maximumDepthInMeters' tenha valor, assumir este.;;0' - '100'
+62;maximumDepthInMeters;;;integer_range;;;0;;;;;^[0-9]*\.?[0-9]+$;;Caso esteja vazio e 'minimumDepthInMeters' tenha valor, assumir este.;;0' - '200'
+63;verbatimLatitude;Fonte externa #3;;;;;;;;;;^\\d{2} \\d{2} \\d{2}\\.\\d{2}[NS]$;;"Se fornecido, validar com o valor convertido em ""decimalLatitude"". Caso haja disparidade, limpar esse valor.";;'41 05 54.03S'
+64;verbatimLongitude;Fonte externa #3;;;;;;;;;;"^\\d{3}d \\d{2}' \\d{2}\"" [EW]$";;"Se fornecido, validar com o valor equivalente convertido em ""decimalLatitude"". Caso haja disparidade, limpar esse valor.";;"'121d 10' 34"" W'"
+65;decimalLatitude;Fonte externa #3;;integer_range;;;-90;90;;;;^-?[0-9]+(\.[0-9]+)?$;;"Se valor não for fornecido e houver valor fornecido no campo ""verbatimLatitude"", utilizar este convertendo-o para decimal.  Validar se localização está situada dentro do território brasileiro.";;'-41.0983423'
+66;decimalLongitude;Fonte externa #3;;integer_range;;;-180;180;;;;^-?[0-9]+(\.[0-9]+)?$;;"Se valor não for fornecido e houver valor fornecido no campo ""verbatimLongitude"", utilizar este convertendo-o para decimal. Validar se localização está situada dentro do território brasileiro.";;'-121.1761111'
+67;coordinateUncertaintyInMeters;;;integer_range;;;100;;;;;^-?[0-9]+(\.[0-9]+)?$;;30 = limite inferior razoável em ou após 2020-05-01 de uma leitura GPS em boas condições, se a precisão real não tiver sido registada na altura - 100 = limite inferior razoável antes de 2020-05-01 de uma leitura GPS em boas condições, se a precisão real não tiver sido registada na altura - 71 = incerteza para uma coordenada UTM com precisão de 100 metros e um sistema de referência espacial conhecido;;
+68;verbatimCoordinates;Fonte externa #3;;;;;;;;;;'41 05 54S 121 05 34W' - '17T 630000 4833400';;;;41 05 54S 121 05 34W' - '17T 630000 4833400'
+69;verbatimCoordinateSystem;vocab_verbatimCoordinateSystem;;;;;;;;;;;;;;graus decimais - «graus decimais' - 'graus minutos segundos' - 'UTM'
+70;geodeticDatum;;;;;;;;;;;;;;;'EPSG:4326' - 'WGS84' - 'NAD27' - 'Campo Inchauspe' - «Europeu 1950' - 'Clarke 1866' - 'Desconhecido'
+71;georeferenceProtocol;;;;;;;;;;;;;;;'Guia de Referência Rápida de Georreferenciamento (Zermoglio et al. 2020, https://doi.org/10.35035/e09p-h128)'
+72;georeferenceSources;;;delimiter_check;"""['-', '|', ';']""";"""|""";;;;;;;;;;https://www.geonames.org/' - 'USGS 1:24000 Florença Montana Quad 1967 | Terrametrics 2008 no Google Earth' - 'Geolocalizar'
+73;georeferencedBy;;;;;;;;;;;;;;;Brad Millen (ROM)' - 'Kristina Yamamoto - Brasil | Janet Fang'
+74;georeferencedDate;;;range;;;01/01/2010;;;;;^\d{4}-\d{2}-\d{2}$;;;;Mesmos que em 'modified'
+75;georeferenceRemarks;;;;;;;;;;;;;;;'Distância assumida por estrada (Hwy. 101)'
+76;kingdom;Fonte externa #2;yes;;;;;;yes;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;Animalia' - 'Archaea' - 'Bactérias' - 'Chromista' - 'Fungos' - 'Plantae' - 'Protozoários' - 'Vírus'
+77;phylum;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;Chordata' (filo) - 'Bryophyta' (divisão)
+78;class;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;'Mammalia' - 'Hepaticopsida'
+79;order;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;'Carnívora' - 'Monocleales'
+80;family;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;Felidae' - 'Monocleaceae'
+81;genus;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;Puma' - 'Monoclea'
+82;specificEpithet;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;concolor' - 'Gottschei'
+83;infraspecificEpithet;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;concolor' (para nome científico 'Puma concolor concolor') - 'oxyadenia' (para o nome científico 'Quercus agrifolia var. oxyadenia') - 'laxa' (para o nome científico «Cheilanthes hirta f. laxa') - 'scaberrima' (para o nome científico 'Indigofera charlieriana var. scaberrima')
+84;scientificName;Fonte externa #2;yes;;;;;;yes;;;;;Utilizar valor para validar e corrigir valores de: kingdom, phylum, class, order, family, genus, specificEpithet, infraspecificEpithet, scientificNameAuthorship, taxonRank,;;Coleoptera' (ordem) - 'Vespertilionidae' (família) - 'Manis' (gênero) - 'Ctenomys sociabilis' (gênero + epíteto específico) - 'Ambystoma tigrinum diaboli' (gênero + epíteto específico + epíteto infraespecífico)
+85;scientificNameAuthorship ;Fonte externa #2;;;;;;;;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;
+86;taxonRank;vocab_taxonRank;yes;;;;;;yes;;;;;"Se fornecido, verificar validade e se está coerente o com valor em ""scientificName"". Se houver discrepância, substituir por valor válido. Se não fornecido, buscar valor válido e fornecer utilizando como base o valor em ""scientificName"". ";;
+87;vernacularName;;;;;;;;;;;;;;;
+88;taxonRemarks;;;;;;;;;;;;;;;
+89;identificationQualifier;;;;;;;;;;;;;;;aff. agrifolia var. oxyadenia' (para 'Quercus aff. agrifolia var. oxyadenia' com os valores de acompanhamento 'Quercus' no género, 'agrifolia' no epíteto específico, 'oxyadenia' no epíteto infraespecífico e 'var.' no taxonRank) - 
+90;typeStatus;;;;;;;;;;;;;;;holótipo de Ctenomys sociabilis. Pearson, O. P., e M. I. Christie. 1985. História Natural, 5(37):388' - «holótipo de Pinus abies | holótipo de Picea abies'
+91;identifiedBy;;;delimiter_check;"['-', '|', ';']";|';;;;;;;;;;James L. Patton' - «Theodore Pappenfuss | Robert Macey'
+92;dateIdentified;;;;;;;;;;;^\d{4}-\d{2}-\d{2}$;;;;Mesmos que em 'modified'
+93;identificationRemarks;;;;;;;;;;;;;;;"""Distinguido entre Anthus correndera e Anthus hellmayri com base nos comprimentos comparativos do uÃ±as."""

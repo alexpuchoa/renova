@@ -1,0 +1,14 @@
+User Story:
+<file>
+
+Based on the provided user story document, please complete the following tasks:
+1) Generate Functional Python Code that fully implements the behavior described in the user story document;
+2) Include interfaces, screens and interaction controls as needed;
+3) The generated code should be already structured to be stored in Github;
+4) Ensure the code adheres to best practices for readability, documentation, style, efficiency, and maintainability;
+5) Include necessary functions, classes, and any other relevant code structure.
+6) Write a comprehensive set of tests to ensure that the generated Python code runs without errors;
+7) Include unit tests and any other relevant tests to cover edge cases and typical usage scenarios;
+8) Utilize a testing framework like unittest or pytest.
+9) Identify and request any missing dependencies, requirements, or details that are necessary to fully implement the behavior described in the user story.
+10) Ask clarifying questions if any part of the user story is ambiguous or incomplete.

@@ -1,0 +1,384 @@
+Creating a set of LLM-supported agents to fully convert user stories documents into functional code is an ambitious and exciting project. To structure your "army of agents," you need to break down the tasks into smaller, manageable components that can be handled by specialized agents. Here’s a structured approach to build your army of agents:
+
+### 1. Define the Workflow
+
+1. **Document Parsing Agent**: Extracts and parses information from user stories.
+2. **Requirements Analysis Agent**: Analyzes the extracted requirements and identifies any missing information.
+3. **Code Generation Agent**: Generates the initial functional code based on the parsed user stories.
+4. **Testing Generation Agent**: Creates a comprehensive set of tests for the generated code.
+5. **Review and Validation Agent**: Reviews the code and tests, ensuring they meet the specified requirements.
+6. **Feedback and Iteration Agent**: Handles feedback and iterates on the code and tests to refine and improve.
+7. **Documentation Agent**: Generates documentation for the codebase, including usage instructions and API references.
+
+### 2. Detailed Agent Responsibilities
+
+#### Document Parsing Agent
+- **Input**: User stories documents.
+- **Output**: Structured data containing extracted requirements and specifications.
+- **Tasks**:
+  - Read and understand the user stories document.
+  - Identify the user story ID and name
+  - Extract key information such as features, user actions, expected behaviors, constraints, and acceptance criteria, data source, data destination, error responses.
+  - Identify any missing or ambiguous information.
+
+#### Requirements Analysis Agent
+- **Input**: Structured data from Document Parsing Agent.
+- **Output**: Detailed requirements and a list of clarifying questions.
+- **Tasks**:
+  - Analyze the extracted information and requirements such as features, user actions, expected behaviors, constraints, and acceptance criteria, data source, data destination, error responses.
+  - Identify potential gaps or ambiguities.
+  - Generate questions to clarify missing or unclear requirements.
+
+#### Code Generation Agent
+- **Input**: Detailed requirements from Requirements Analysis Agent.
+- **Output**: Initial functional code.
+- **Tasks**:
+  - Generate Python code that implements the behavior described in the detailed requirements.
+  - Ensure the code adheres to best practices for readability, efficiency, and maintainability.
+  - Include necessary functions, classes, and any other relevant code structures.
+
+#### Testing Generation Agent
+- **Input**: Generated code from Code Generation Agent.
+- **Output**: A comprehensive set of tests.
+- **Tasks**:
+  - Write unit tests and any other relevant tests to cover edge cases and typical usage scenarios.
+  - Utilize a testing framework like `unittest` or `pytest`.
+  - Ensure the tests validate the functionality of the generated code.
+
+#### Review and Validation Agent
+- **Input**: Generated code and tests.
+- **Output**: Reviewed and validated code and tests.
+- **Tasks**:
+  - Review the generated code and tests for accuracy and completeness.
+  - Validate that the code meets the specified requirements.
+  - Ensure the code and tests are free of errors and adhere to best practices.
+
+#### Feedback and Iteration Agent
+- **Input**: Feedback from users or automated reviews.
+- **Output**: Refined code and tests.
+- **Tasks**:
+  - Handle feedback and suggestions for improvement.
+  - Iterate on the code and tests to refine and enhance them.
+  - Ensure continuous improvement based on user feedback.
+
+#### Documentation Agent
+- **Input**: Finalized code and tests.
+- **Output**: Comprehensive documentation.
+- **Tasks**:
+  - Generate documentation for the codebase.
+  - Include usage instructions, API references, and any other relevant information.
+  - Ensure the documentation is clear, concise, and helpful.
+
+### 3. Implementing the Agents
+
+To handle the iteration process where the `RequirementsAnalysisAgent` identifies missing information, you can design a feedback loop that involves the following steps:
+
+1. **Identify Missing Information**: The `RequirementsAnalysisAgent` identifies any gaps or ambiguities in the user story.
+2. **Request Additional Information**: Automatically generate a request for the user to provide the missing information.
+3. **Update User Story**: Incorporate the provided information into the user story.
+4. **Re-run Analysis**: Re-run the analysis with the updated user story.
+
+Here's how you can implement this:
+
+### Code Implementation
+
+Certainly! Here’s how you can structure and implement the system using the Crew.AI framework instead of LangChain. Crew.AI is a collaborative AI development framework that allows you to create and manage multiple AI agents working together to achieve complex tasks.
+
+### Step-by-Step Implementation with Crew.AI
+
+
+#### 2. Define the Project Structure
+
+Here’s the suggested project structure for implementing the user story using Crew.AI:
+
+```
+renova/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── validation.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   └── project_data.html
+├── data/
+│   └── project_data.csv
+├── agents/
+│   ├── document_parsing_agent.py
+│   ├── requirements_analysis_agent.py
+│   ├── code_generation_agent.py
+│   ├── testing_generation_agent.py
+│   ├── review_and_validation_agent.py
+│   ├── feedback_and_iteration_agent.py
+│   ├── documentation_agent.py
+│   └── __init__.py
+├── tests/
+│   └── test_routes.py
+├── environment.yml
+├── run.py
+└── README.md
+```
+
+#### 3. Implement the Agents
+
+**Document Parsing Agent**
+
+```python
+# agents/document_parsing_agent.py
+
+from crewai import Agent
+
+class DocumentParsingAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def parse_user_story(self, document):
+        response = self.llm.prompt(f"Extract key information from the following user story document:\n{document}")
+        return response
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = DocumentParsingAgent(llm)
+    user_story_document = "Path to your user story document"
+    parsed_data = agent.parse_user_story(user_story_document)
+    print(parsed_data)
+```
+
+**Requirements Analysis Agent**
+
+```python
+# agents/requirements_analysis_agent.py
+
+from crewai import Agent
+
+class RequirementsAnalysisAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def analyze_requirements(self, parsed_data):
+        response = self.llm.prompt(f"Analyze the following requirements and identify any missing information:\n{parsed_data}")
+        missing_info = response.get('missing_info', '')
+        return response, missing_info
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = RequirementsAnalysisAgent(llm)
+    parsed_data = {
+        "features": "...",
+        "user_actions": "...",
+        "expected_behaviors": "...",
+        "constraints": "...",
+        "acceptance_criteria": "...",
+		"data_sources": "...",
+		"data_destinations": "...",
+		"error_responses": "..."
+    }
+    requirements, missing_info = agent.analyze_requirements(parsed_data)
+    if missing_info:
+        print("Missing Information:", missing_info)
+    else:
+        print("Requirements are complete:", requirements)
+```
+
+**Code Generation Agent**
+
+```python
+# agents/code_generation_agent.py
+
+from crewai import Agent
+
+class CodeGenerationAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def generate_code(self, requirements):
+        response = self.llm.prompt(f"Generate Python code based on the following requirements:\n{requirements}")
+        return response
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = CodeGenerationAgent(llm)
+    code = agent.generate_code(detailed_requirements)
+    print(code)
+```
+
+**Testing Generation Agent**
+
+```python
+# agents/testing_generation_agent.py
+
+from crewai import Agent
+
+class TestingGenerationAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def generate_tests(self, code):
+        response = self.llm.prompt(f"Generate a comprehensive set of tests for the following Python code:\n{code}")
+        return response
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = TestingGenerationAgent(llm)
+    tests = agent.generate_tests(code)
+    print(tests)
+```
+
+**Review and Validation Agent**
+
+```python
+# agents/review_and_validation_agent.py
+
+from crewai import Agent
+
+class ReviewAndValidationAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def review_and_validate(self, code, tests):
+        response = self.llm.prompt(f"Review and validate the following Python code and tests:\nCode:\n{code}\nTests:\n{tests}")
+        return response
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = ReviewAndValidationAgent(llm)
+    reviewed_code, reviewed_tests = agent.review_and_validate(code, tests)
+    print(reviewed_code, reviewed_tests)
+```
+
+**Feedback and Iteration Agent**
+
+```python
+# agents/feedback_and_iteration_agent.py
+
+from crewai import Agent
+
+class FeedbackAndIterationAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def iterate_on_feedback(self, code, tests):
+        response = self.llm.prompt(f"Iterate on the following feedback for the Python code and tests:\nCode:\n{code}\nTests:\n{tests}")
+        return response
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = FeedbackAndIterationAgent(llm)
+    refined_code, refined_tests = agent.iterate_on_feedback(reviewed_code, reviewed_tests)
+    print(refined_code, refined_tests)
+```
+
+**Documentation Agent**
+
+```python
+# agents/documentation_agent.py
+
+from crewai import Agent
+
+class DocumentationAgent(Agent):
+    def __init__(self, llm):
+        self.llm = llm
+
+    def generate_documentation(self, code):
+        response = self.llm.prompt(f"Generate comprehensive documentation for the following Python code:\n{code}")
+        return response
+
+# Usage
+if __name__ == "__main__":
+    from crewai.llms import OpenAI
+    llm = OpenAI(model="gpt-4")
+    agent = DocumentationAgent(llm)
+    documentation = agent.generate_documentation(refined_code)
+    print(documentation)
+```
+
+#### 4. Integrate the Agents
+
+You can integrate these agents into a cohesive workflow by orchestrating them in the `run.py` file:
+
+```python
+# run.py
+
+from agents.document_parsing_agent import DocumentParsingAgent
+from agents.requirements_analysis_agent import RequirementsAnalysisAgent
+from agents.code_generation_agent import CodeGenerationAgent
+from agents.testing_generation_agent import TestingGenerationAgent
+from agents.review_and_validation_agent import ReviewAndValidationAgent
+from agents.feedback_and_iteration_agent import FeedbackAndIterationAgent
+from agents.documentation_agent import DocumentationAgent
+from crewai.llms import OpenAI
+
+def get_user_input(prompt):
+    return input(prompt)
+
+def main(user_story_document):
+    # Initialize LLM
+    llm = OpenAI(model="gpt-4")
+
+    # Document Parsing
+    parsing_agent = DocumentParsingAgent(llm)
+    parsed_data = parsing_agent.parse_user_story(user_story_document)
+
+    requirements_complete = False
+    while not requirements_complete:
+        # Requirements Analysis
+        analysis_agent = RequirementsAnalysisAgent(llm)
+        detailed_requirements, missing_info = analysis_agent.analyze_requirements(parsed_data)
+        
+        if missing_info:
+            # Request additional information from the user
+            print("Missing Information Detected:", missing_info)
+            additional_info = get_user_input("Please provide the missing information: ")
+            
+            # Update parsed data with additional information
+            # This is a simplistic update, you might need to handle complex structures
+            parsed_data.update(additional_info)
+        else:
+            requirements_complete = True
+
+    # Code Generation
+    code_generation_agent = CodeGenerationAgent(llm)
+    code = code_generation_agent.generate_code(detailed_requirements)
+
+    # Testing Generation
+    testing_agent = TestingGenerationAgent(llm)
+    tests = testing_agent.generate_tests(code)
+
+    # Review and Validation
+    review_agent = ReviewAndValidationAgent(llm)
+    reviewed_code, reviewed_tests = review_agent.review_and_validate(code, tests)
+
+    # Feedback and Iteration (if needed)
+    feedback_agent = FeedbackAndIterationAgent(llm)
+    refined_code, refined_tests = feedback_agent.iterate_on_feedback(reviewed_code, reviewed_tests)
+
+    # Documentation
+    documentation_agent = DocumentationAgent(llm)
+    documentation = documentation_agent.generate_documentation(refined_code)
+
+    # Save results
+    save_to_github(refined_code, refined_tests, documentation)
+
+def save_to_github(code, tests, documentation):
+    # Logic to save code, tests, and documentation to GitHub
+    pass
+
+if __name__ == "__main__":
+    user_story_document = "Path to your user story document"
+    main(user_story_document)
+```
+
+
+

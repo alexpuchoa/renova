@@ -1,0 +1,14 @@
+The uploaded file (PMQQS process flow) is a diagram representing a process that comprises many steps starting with the ingestion of 3 files coming from labs: 
+1) a report as PDF with many environmental measurements, 
+2) a CSV file with just the relevant measurements found in the report. it is intended to verify integrity of the report, 
+3) and an excel sheet with the history of reposrts so far. 
+Along this process, many validation and quality assurance tasks are performed, mainly by the MP5 tool. Its output, after some transformation and quality assurement operations, is stored in a DataLake and finally sent to a GIZ tool as well as to some visualization panels on a web portal. Along its way, the data is also sent to an independent consulting firm to revalidate them. 
+One of the technical concerns of the project manager is on how to read the PDF files contents with sufficient precision to the point the human checking against the corresponding CSV files turns itself unnecessary. the project aim is to create a corporate database for auditing and analytical purposes. 
+It is expected that this database will also allow for new ways of serving data to society and other organizations. avoid changing or substituting the MP5 + DataLake parts of the process and, instead, create a new workflow that gradually superseed it. during an arbitrary period, the output of the MP5 + Datalake parts can be also stored in the new database until they become useless. 
+Have in mind that the project team still does not have full understanding about the data involved and its semantics. it is a very niche context, very unfamiliar to the manager and the technical team. 
+### tasks: 
+1) analyze the diagrama and identify every of the steps of the process it represents; 
+2) formulate a list of stories or product increments to populate an initial product backlog; 
+3) prioritize and order the stories according to the features and increments that provide greater valur to the intended user and is technically more challenging; 
+4) detail the story with the highest priority according to your choice; 
+5) suggests some increments that may provide quick wins to the client.

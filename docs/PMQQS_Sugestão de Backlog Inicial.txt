@@ -1,0 +1,97 @@
+Descrição das Etapas do Processo PMQQS:
+
+1. Ingestão de arquivos:
+ - Laudos técnicos como PDF.
+ - Arquivo CSV com métricas relevantes para batimento com PDFs.
+ - Planilha Excel com relatórios históricos.
+ - Validação inicial: Garantir que os arquivos sejam recebidos corretamente.
+
+2. Validação e Garantia de Qualidade (QA):
+ - Ferramenta MP5: continua a realizar tarefas de validação e controle de qualidade nos dados ingeridos durante o período de transição.
+ - Novo Workflow: desenvolver e integrar um novo sistema para realizar tarefas de validação e controle de qualidade que substituirá gradativamente o MP5.
+
+3. Operações de transformação:
+ - Transformação de dados (MP5): continuar usando o MP5 para transformação de dados durante a transição.
+ - Transformação de Dados (Novo Sistema): implementar novas operações de transformação dentro do novo fluxo de trabalho.
+
+4. Armazenamento de dados:
+ - DataLake: continuar armazenando os dados transformados no DataLake durante a transição.
+ - Novo banco de dados: armazenar simultaneamente a saída do MP5 e do novo sistema em um novo banco de dados projetado para uso a longo prazo.
+
+5. Distribuição de dados:
+ - Ferramenta GIZ: enviar dados validados e armazenados para a ferramenta GIZ do MP5 e do novo sistema.
+ - Painel de Visualização: fornecer dados para um painel de visualização em um portal web para fins analíticos e de consultoria de ambas as fontes.
+ - Revalidação Independente: enviar dados para uma consultoria independente para revalidação do MP5 e do novo sistema.
+
+6. Preocupação técnica:
+ - Precisão de leitura de PDF: melhorar a precisão da extração de dados PDF para minimizar a necessidade de intervenção humana.
+
+
+Possíveis histórias do backlog inicial do produto:
+
+1. História 1: Conduzir uma fase de descoberta e análise de dados para compreender os dados e sua semântica.
+2. História 2: Desenvolver um sistema para ingestão e validação de arquivos PDF, CSV e Excel.
+3. História 3: Implementar a validação de dados inicial e o controle de qualidade usando a ferramenta MP5.
+4. História 4: Criar um novo fluxo de trabalho para validação de dados e controle de qualidade para substituir gradualmente o MP5.
+5. História 5: Criar pipelines de transformação de dados para o novo fluxo de trabalho.
+6. História 6: Integrar o novo fluxo de trabalho a um novo banco de dados para armazenar dados transformados.
+7. História 7: Implementar um sistema paralelo de armazenamento de dados no novo banco de dados.
+8. História 8: Conectar e enviar dados para a ferramenta GIZ do MP5 e do novo sistema.
+9. História 9: Criar um painel de visualização para o portal web usando dados de ambas as fontes.
+10. História 10: Desenvolver um módulo de leitura de PDF preciso para minimizar a verificação humana.
+11. História 11: Implementar verificações automatizadas de qualidade de dados em relação a dados históricos.
+12. História 12: Configurar processos de revalidação com a empresa de consultoria usando dados de ambas as fontes.
+13. História 13: Criar interfaces de usuário para monitorar e gerenciar fluxos de trabalho de processamento de dados.
+
+
+Sugestão de priorização e ordenação:
+
+1. História 1: Conduzir uma fase de descoberta e análise de dados para compreender os dados e sua semântica.
+2. História 2: Desenvolver um sistema para ingestão e validação de arquivos PDF, CSV e Excel.
+3. História 10: Desenvolver um módulo de leitura de PDF preciso para minimizar a verificação humana.
+4. História 3: Implementar a validação de dados inicial e o controle de qualidade usando a ferramenta MP5.
+5. História 4: Criar um novo fluxo de trabalho para validação de dados e controle de qualidade para substituir gradualmente o MP5.
+6. História 11: Implementar verificações automatizadas de qualidade de dados em relação a dados históricos.
+7. História 5: Criar pipelines de transformação de dados para o novo fluxo de trabalho.
+8. História 6: Integrar o novo fluxo de trabalho a um novo banco de dados para armazenar dados transformados.
+9. História 7: Implementar um sistema paralelo de armazenamento de dados no novo banco de dados.
+10. História 8: Conectar e envie dados para a ferramenta GIZ do MP5 e do novo sistema.
+11. História 12: Configurar processos de revalidação com a empresa de consultoria usando dados de ambas as fontes.
+12. História 9: Criar um painel de visualização para o portal web usando dados de ambas as fontes.
+13. História 13: Criar interfaces de usuário para monitorar e gerenciar fluxos de trabalho de processamento de dados.
+
+
+História detalhada de maior prioridade (História 1):
+
+Título: Descoberta e análise de dados para compreender os dados e sua semântica
+
+Descrição:
+- Envolver especialistas no assunto para obter insights sobre os dados.
+- Analisar a estrutura, conteúdo e semântica dos dados.
+- Documentar as descobertas de maneira abrangente.
+- Identificar quaisquer lacunas na compreensão e planejar a aquisição de conhecimento adicional, se necessário.
+
+Critérios de aceitação:
+- Mapeamento e modelagem detalhando a estrutura, o conteúdo e a semântica dos dados.
+- Documentar as regras de negócios, definições e principais atributos de dados.
+- Identificar quaisquer problemas de qualidade de dados e soluções propostas.
+- Compreender claramente os dados para informar as fases subsequentes de desenvolvimento.
+
+Tarefas:
+1. Agendar e conduzir workshops com especialistas no assunto da Renova.
+2. Realizar análises detalhadas de dados usando conjuntos de dados de amostra.
+3. Documentar as estruturas de dados, definições e regras de negócios.
+4. Identificar e documentar quaisquer problemas de qualidade dos dados.
+5. Revisar as descobertas com a equipe do projeto e ajustar o plano conforme necessário.
+
+
+Quick wins:
+
+1. História 3: Implementar a validação de dados inicial (PDFs e CSVs) e alimentar o controle de qualidade usando a ferramenta MP5.
+ - Fornece valor imediato, garantindo a qualidade dos dados no início do processo.
+
+2. História 10: Desenvolver um módulo de leitura de PDF (e conferência com CSV) com precisão para minimizar/eliminar necessidade de verificação humana.
+ - Reduzir a carga de trabalho manual e melhorar precisão e eficiência.
+
+3. História 7: Implementar um sistema paralelo de armazenamento de dados no novo banco de dados (da Solução Renova).
+ - Estabelece uma solução robusta de armazenamento para futuras necessidades de processamento de dados.

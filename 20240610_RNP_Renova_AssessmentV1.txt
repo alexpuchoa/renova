@@ -1,0 +1,123 @@
+Qual é o setor de atuação do cliente? 
+* O cliente é a Fundação Renova, a entidade responsável pela mobilização para a reparação dos danos causados pelo rompimento da barragem de Fundão, em Mariana (MG). 
+* A Fundação Renova tem como propósito de gerir e executar os programas e ações para recuperar, remediar e reparar os impactos gerados a partir do rompimento da Barragem de Fundão. Fundação Renova - Estatuto.
+
+Quais são os principais produtos ou serviços oferecidos pela empresa em sua atividade principal?
+* O escopo da atuação da Fundação Renova, são 42 programas que se desdobram em diferentes projetos que estão sendo implementados nos 670 quilômetros de área impactada ao longo do rio Doce e afluentes. Fundação Renova - A Fundação
+* Os programas estão divididos em 3 eixos temáticos que buscam realizar reparações no contexto das pessoas e comunidades, terra e água (gestão de solo, recursos hídricos, biodiversidade), e de reconstrução e infraestrutura. Fundação Renova - Conheça os programas
+* A Fundação Renova é responsável pela gestão desses programas e pela publicização dos resultados obtido com esses programas, submetendo estes resultados ao Comitê Interfederativo (CIF) - órgão presidido pelo IBAMA para validar as medidas de reparação. Ibama - CIF
+     
+Quais são os desafios relacionados a dados enfrentados atualmente pela empresa que motivaram a contratação de um projeto?
+* Diferentes fornecedores de dados.
+* Dificuldade com padronização dos dados.
+* Dificuldade de reunir e dar acesso livre aos dados produzidos para a sociedade.
+       
+Quais são os desafios do projeto?
+* Ausência de um repositório/banco de dados comum para todos os dados. 
+
+O cliente enfrenta alguma dificuldade específica em relação à gestão ou uso de dados atualmente? 
+* Grande esforço manual para processamento dos arquivos.
+* Ausencia de uma estrutura de armazenamento comum para dados de um mesmo domínio (e.g. dados bióticos).
+* Ausência de padronização das fontes de dados. Há formatos distintos (e.g. .csv, .xlsx, .txt).
+* Ausência de relações definidas entre dados de um mesmo domínio.
+* Dificuldade de reunir esses dados e disponibilizar os dados obtidos pelos programas para uso dos órgãos governamentais e da sociedade.
+
+Quais são, nas palavras do cliente, os principais objetivos deste projeto de dados?
+* Conseguir tratar os dados, ou seja, transformá-los para uma forma padronizada.
+* Dar visibilidade para esses dados utilizando o IPT/SiBBr. A solução SiBBr/IPT foi contratada como uma alternativa para dar visibilidade a esses dados e disponibilizá-los para utilização da comunidade.
+
+O cliente definiu alguma métrica específica para avaliar o sucesso do projeto?
+* Não há evidências da métrica de sucesso que será utilizada para determinar o sucesso do projeto.
+
+A equipe interna do cliente possui experiência anterior no desenvolvimento de projetos de dados, incluindo o uso de metodologias ágeis ou outras abordagens de desenvolvimento de software?
+* Equipe interna não é formada por profissionais de tecnologia.
+* Equipe é multidisciplinar formada de biólogos e engenheiros ligados à área ambiental.
+
+Quais os principais desafios enfrentados pela equipe interna do cliente ao executar projetos de dados anteriores?
+* O cliente possui iniciativas internas de dados.
+* As dificuldades indicadas pelo cliente estão fundamentadas na falta de infraestrutura de gerenciamento de dados própria para os desafios enfrentados pela equipe.
+
+A equipe interna do cliente possui profissionais especializados em dados? 
+* Não há indícios da existência de um time de Engenheiro de Dados e Cientistas de Dados próximos do time negocial (Biólogos da Fundação Renova).
+* Os fluxos de dados operados hoje pelo cliente são realizados por técnicos que não possuem formação específica em gerenciamento de dados. Uma evidência é o gerenciamento das bases de dados do programa de monitoramento da agua descrito em reunião que é operado por uma bióloga (Bianca Menezes Lima Cardoso).
+      
+A equipe está familiarizada com ferramentas e tecnologias emergentes no campo da análise de dados, como aprendizado de máquina, big data, ou computação em nuvem?
+* Não
+
+Quem serão os usuários da solução proposta? Esses usuários são internos ou externos à organização do cliente?
+* Administrador da Instituição: É um usuário interno. Deverá ser capaz de realizar gestão e controle de acesso dos usuários, gerenciar os recursos de dados criados pelos usuários e também ser capaz de gerar relatórios gerenciais e técnicos.
+* Fornecedores de dados: São usuários externos, como laboratórios e pesquisadores, que realizam pesquisas de campo e posteriormente inserem os dados na solução.
+* Visitante: É um usuário externo que utiliza a solução da RNP para atestar a qualidade dos dados inseridos na plataforma. Trata-se de um auditor externo.
+* Administrador RNP: É um usuário externo responsável por dar suporte à solução construída para a empresa. Esse usuário é necessário, pois não há uma equipe de tecnologia capaz de realizar atualizações na plataforma que será construída para o cliente. O administrador RNP deverá ser capaz de realizar a gestão do IAM (Identity and Access Management) da plataforma.
+
+Qual é o nível técnico ou familiaridade dos usuários finais em relação às áreas de engenharia, ciência e análise de dados?
+* Não há indícios da existência de um time de Engenheiro de Dados e Cientistas de Dados próximos do time negocial (Biólogos da Fundação Renova).
+* Os fluxos de dados operados hoje pelo cliente são realizados por técnicos que não possuem formação específica em gerenciamento de dados. 
+
+Existem políticas de segurança de dados que exigem que o desenvolvimento, manipulação e análise dos dados ocorram na infraestrutura interna do cliente?
+* Não há menção de políticas de segurança que atuem de forma impeditiva na manipulação de dados fora da infraestrutura do cliente.
+* O projeto será desenvolvido em um ambiente de nuvem construído pela RNP.
+* O ambiente de nuvem utilizado será multicloud com o webapp sendo hospedado na Amazon Web Services (AWS) e operações de manipulação e qualidade de dados hospedado no Google Cloud Plataform (GCP).
+
+O projeto será desenvolvido na infraestrutura computacional do cliente? 
+* O projeto não será desenvolvido na infraestrutura do cliente.
+* O projeto será desenvolvido em um ambiente de nuvem construído pela RNP.
+* O ambiente de nuvem utilizado será multicloud.
+* O webapp será hospedado na Amazon Web Services (AWS).
+* As operações de manipulação e verificação de qualidade de dados serão hospedadas no Google Cloud Plataform (GCP).
+
+Existe uma equipe interna capacitada para fornecer a infraestrutura necessária para o desenvolvimento do projeto?
+* Não há indicios de que necessário a disponibilidade da equipe interna para gestão da infraestrutura necessária para desenvolver a solução.
+
+Existe a necessidade de manipulação de grandes volumes de dados (big data) durante a execução do projeto?
+* O projeto apresenta evidências de que não será necessária a manipulação de conjuntos de dados que se encaixam na definição de Big Data.
+* Os arquivos de interesse podem ter entre 50KB a 3MB de tamanho e algo entre 200 a 20.000 registros.
+* Estima-se que o volume de arquivos a ser ingerido seja por volta de 200 a 300 por semestre.
+
+O projeto será desenvolvido na infraestrutura computacional da empresa? 
+* Não
+
+Existe uma equipe interna capacitada para fornecer a infraestrutura necessária para o desenvolvimento do projeto?
+* O projeto não será desenvolvido na infraestrutura do cliente.
+* O projeto será desenvolvido em um ambiente de nuvem construído pela RNP.
+* O ambiente de nuvem utilizado será multicloud.
+* O webapp será hospedado na Amazon Web Services (AWS).
+* As operações de manipulação e verificação de qualidade de dados serão hospedadas no Google Cloud Platform (GCP).
+* Não há indícios de que necessário a disponibilidade da equipe interna para gestão da infraestrutura necessária para desenvolver a solução.
+
+Existe a necessidade de enriquecimento dos dados por meio de fontes externas?
+* Não é necessário o enriquecimento e/ou a contratação de serviços externos de dados para complementar as bases de dados do cliente.
+* O Cliente se utiliza de laboratórios de pesquisa, universidades e outros agentes externos, como fornecedores de dados.
+* Essa característica imputa desafios semelhantes ao uso de fontes externas pois traz desafios relacionados a padronização e volatilidade da qualidade dos dados
+* É necessário cuidado adicional durante o processo de ingestão dos dados.
+       
+Existe um mapeamento prévio em relação aos formatos de dados necessários para a ingestão e integração?
+* CSV
+* Planilhas não estruturadas
+* Planilha não estruturada de dados de localização geográfica de pontos de coleta. Evidência: Pontos amostrais.xlsx
+* Planilha não estruturada de dados bióticos (correspondente à planilha PLANIL~1.XLS do exemplo seguinte). Evidência: MATRIZ~1.XLS
+* Planilhas em formato estruturado
+* Planilha estruturada de dados bióticos (correspondente à planilha MATRIZ~1.XLS do exemplo anterior). Evidência: PLANIL~1.XLS
+
+O cliente espera quais resultados com o projeto?
+* Disponibilidade de dados para consumo.
+* Reduzir dificuldade no acesso dos dados.
+* Melhorar o entendimento dos dados.
+* Melhorar a visibilidade dos dados.
+* Cliente não está interessado que o projeto realize análises estatísticas e descritivas com os dados.
+* Cliente não está interessado em criar modelos de automação de decisão.
+* Não está claro se o cliente tem interesse em ser capaz de acessar as bases de dados que foram estruturadas durante o processo de ingestão e armazenamento Evidência: Weekly PMQQS.
+* Não está claro que o cliente quer ter acesso direto aos serviços de nuvem que armazenam os dados Evidência: Weekly PMQQS.
+       
+Há análises e monitoramento da qualidade dos dados, em especial os potencialmente relacionados à solução de dados?
+* Atualmente, há análise, monitoramento e correção da qualidade dos dados manualmente, por parte da equipe técnica de biólogos. Evidência: Weekly PMQQS.
+
+Há conhecimento de inconsistências nos dados, especialmente os relacionados ao desafio da solução de dados?
+* Há conhecimento de inconsistências nos dados, o que constitui um dos desafios do projeto.
+* Um exemplo de inconsistência está nos arquivos brutos de coleta de dados bióticos que é fornecido com os cabeçalhos incompatíveis com as regras 
+* A solução precisa ser capaz de identificar inconsistências nos arquivos de dados brutos e oferecer uma maneira de corrigir esses arquivos.
+
+Há documentação de processamentos que tratam inconsistências nos dados, especialmente os relacionados ao desafio da solução de dados?
+* Há documentação de processamentos que tratam inconsistências nos dados, conhecidos como regras Darwin Core, publicamente acessíveis e mantidas por uma comunidade ativa de contribuintes do mundo todo.
+* Exemplo de documentação pode ser encontrado no repositório TDWG no GitHub. Evidência: Core Tests and Assertions (TG2)
+* Exemplo de documentação pode ser acessado no repositório DarwinCoreBrasil no GitHub. Evidência: Testes de qualidade de dados
